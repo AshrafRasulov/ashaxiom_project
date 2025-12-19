@@ -1,10 +1,11 @@
+from .lib.main import AxiomMain
+
 class Axiom:
-    def __init__(self, name="AshAxiom User"):
-        self.name = name
-    
-    def say_hello(self):
-        return f"Привет, {self.name}! Your lib is run successfully!"
+    @staticmethod
+    def start(initial_value=0):
+        """Точка входа для создания цепочки вычислений"""
+        return AxiomMain(initial_value)
 
     @staticmethod
     def version():
-        return "0.1.0"
+        return "0.2.0 (Piper Edition)"
