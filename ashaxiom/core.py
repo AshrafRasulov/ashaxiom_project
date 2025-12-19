@@ -18,4 +18,4 @@ class Axiom:
     @staticmethod
     def version():
         """Returns the current library version."""
-        return "0.4.0 (Axiom Intelligence Edition)"
+        return "Final Release v1.0.0 (Axiom Intelligence Edition)"
