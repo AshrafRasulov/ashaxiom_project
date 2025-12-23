@@ -1,0 +1,10 @@
+ashaxiom/
+├── lib/
+│   ├── brain/         # Axiom Intelligence & Logic
+│   ├── graph/         # 2D/3D Plotting Engine
+│   ├── hMath/         # Core Math & Author-specific Books
+│   │   └── hmBooks/   # Organized by Authors/Collections
+│   ├── data/          # Export Modules (Excel/JSON)
+│   ├── symbolic/      # SymPy Wrappers
+│   └── application.py # State Manager & HTML Explorer
+└── core.py            # Main API Entry Point

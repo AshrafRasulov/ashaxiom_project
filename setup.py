@@ -2,32 +2,27 @@ from setuptools import setup, find_packages
 
 setup(
     name="ashaxiom",
-    version="0.1.0",
-    packages=find_packages(),
-    description="A high-level mathematical analysis library for Jupyter Notebook designed for advanced calculations and higher mathematics solutions.",
-    
-    author="Ashraf",
-    author_email="your_email@example.com", # Mojesh zamenit' na svoy real'nyy email
-    
-    # Ispravlennaya ssylka na tvoy GitHub
-    url="https://github.com/AshrafRasulov/ashaxiom_project", 
-    
-    long_description=open("README.md").read() if hasattr(open("README.md"), "read") else "AshAxiom Library",
+    version="1.2.0", # Твоя текущая стабильная версия
+    author="Ashraf Rasulov",
+    author_email="your_email@example.com",
+    description="Intelligent Analytical Framework for Higher Mathematics",
+    long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    
+    url="https://github.com/AshrafRasulov/ashaxiom_project",
+    packages=find_packages(),
     install_requires=[
         "numpy",
+        "sympy",
         "matplotlib",
         "scipy",
-        "sympy"
+        "pandas",
+        "openpyxl"
     ],
-    
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Topic :: Scientific/Engineering :: Mathematics",
         "Framework :: Jupyter",
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.7',
 )

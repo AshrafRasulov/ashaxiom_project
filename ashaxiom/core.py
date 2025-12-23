@@ -2,20 +2,15 @@ from .lib.main import AxiomMain
 from .lib.brain.AxiomIntelligence import BrainCore
 
 class Axiom:
-    """
-    Main entry point for the AshAxiom library.
-    """
     @staticmethod
     def start(initial_value=0):
-        """Initializes a new calculation chain."""
         return AxiomMain(initial_value)
     
     @staticmethod
-    def think():
-        """Returns the Brain instance for high-level automated solving."""
-        return BrainCore(AxiomMain())
+    def think(mode="solve"):
+        """Entry to Intelligent Interface."""
+        return BrainCore(AxiomMain(), mode=mode)
 
     @staticmethod
     def version():
-        """Returns the current library version."""
-        return "Final Release v1.0.0 (Axiom Intelligence Edition)"
+        return "1.2.0 (Stable & Smart)"
