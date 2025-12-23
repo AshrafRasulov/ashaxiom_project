@@ -13,4 +13,4 @@ class Axiom:
 
     @staticmethod
     def version():
-        return "1.2.0 (Stable & Smart)"
+        return "1.3.0 (Trading Analysis)"
