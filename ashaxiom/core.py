@@ -8,9 +8,8 @@ class Axiom:
     
     @staticmethod
     def think(mode="solve"):
-        """Entry to Intelligent Interface."""
         return BrainCore(AxiomMain(), mode=mode)
 
     @staticmethod
     def version():
-        return "1.3.0 (Trading Analysis)"
+        return "2.1.0 (Expert System Standard)"
