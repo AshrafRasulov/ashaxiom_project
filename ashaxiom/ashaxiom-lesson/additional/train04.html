@@ -1,21 +1,29 @@
 <div class="container py-4 animate-fade-in">
-    <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-        <div class="card-header bg-danger text-white py-3">
-            <h4 class="m-0" data-lang="task4_title"></h4>
+    <div class="card border-0 shadow-lg rounded-4 overflow-hidden border-success" style="border-width: 2px !important;">
+        <div class="card-header bg-success text-white py-3">
+            <h4 class="m-0">Mastery Exam: Multi-Author Intelligence</h4>
         </div>
-        <div class="card-body p-4">
-            <p class="lead" data-lang="task4_desc"></p>
+        <div class="card-body p-5">
+            <p class="lead">Combine logic from different centuries. Solve a limit from <b>Zorich</b> and calculate hash security from <b>Satoshi</b>.</p>
             
-            <div class="bg-dark text-light p-3 rounded-3 font-monospace mb-4">
-                <pre class="m-0"># Calculate double spend probability AND analyze trend<br>prob = brain.author("Satoshi").solve("attacker", q=0.3, z=10)<br>trend = brain.solve("market", ticker="BTC-USD").annual_report()<br><br>display(prob)<br>display(trend)</pre>
+            <div class="jupyter-cell">
+                <code>
+                    <span class="sh-var">brain</span> = <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">think</span>()<br><br>
+                    <span class="sh-cmt"># 1. Limit from Zorich (Vol 1)</span><br>
+                    <span class="sh-var">lim</span> = <span class="sh-var">brain</span>.<span class="sh-fn">author</span>(<span class="sh-str">"Zorich"</span>).<span class="sh-fn">solve</span>(<span class="sh-str">"limit"</span>, expr=<span class="sh-str">"sin(x)/x"</span>)<br><br>
+                    <span class="sh-cmt"># 2. Bitcoin probability from Satoshi</span><br>
+                    <span class="sh-var">prob</span> = <span class="sh-var">brain</span>.<span class="sh-fn">author</span>(<span class="sh-str">"Satoshi"</span>).<span class="sh-fn">solve</span>(<span class="sh-str">"attacker"</span>, q=<span class="sh-num">0.3</span>, z=<span class="sh-num">6</span>)<br><br>
+                    <span class="sh-fn">display</span>(<span class="sh-var">lim</span>, <span class="sh-var">prob</span>)
+                </code>
             </div>
 
-            <p class="fw-bold" data-lang="expected_res"></p>
-            <img src="additional/imgs/train04_hybrid.jpg" class="img-fluid rounded border mb-4">
+            <div class="mt-4 text-center">
+                <img src="additional/imgs/train05_final.jpg" class="img-fluid rounded border shadow-sm">
+            </div>
 
-            <div class="text-center mt-5">
-                <button class="btn btn-success btn-lg px-5 shadow-sm text-white" onclick="navigate('home')">
-                    <span data-lang="btn_mastery"></span>
+            <div class="mt-5 pt-4 text-center">
+                <button class="btn btn-success btn-lg px-5 shadow-sm text-white fw-bold rounded-pill" onclick="navigate('home')">
+                    <span data-lang="btn_mastery">Complete Academy</span>
                 </button>
             </div>
         </div>

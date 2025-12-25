@@ -1,26 +1,29 @@
 <div class="container py-4 animate-fade-in">
     <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-        <div class="card-header bg-primary text-white py-3">
-            <h4 class="m-0" data-lang="task2_title"></h4>
+        <div class="card-header bg-dark text-white py-3">
+            <h4 class="m-0" data-lang="task3_title"></h4>
         </div>
         <div class="card-body p-4">
-            <p class="lead" data-lang="task2_desc"></p>
+            <p class="lead" data-lang="task3_desc"></p>
             
-            <h5 class="text-secondary mt-4">Python Solution Pattern:</h5>
-            <div class="bg-dark text-warning p-3 rounded-3 font-monospace mb-4">
-                <pre class="m-0"># 1. Threaded fetch for both stocks<br>thr = ashaxiom.Axiom.think().lesson()<br>t1 = ashaxiom.Axiom.start().solve("market", ticker="INTC", period="1y").lazy()<br>t2 = ashaxiom.Axiom.start().solve("market", ticker="AMD", period="1y").lazy()<br>data = thr.add(t1, t2).threadingOn(2)<br><br># 2. Math Analysis: Find the Spread (3rd line)<br>spread = np.array(data[0]) - np.array(data[1])<br><br># 3. Apply Fikhtengolts Logic (4th line: Polynomial Fit)<br>report = ashaxiom.Axiom.start(spread).annual_report()<br>display(report)</pre>
+            <div class="result-label">Jupyter Input</div>
+            <div class="jupyter-cell">
+                <code>
+                    <span class="sh-cmt"># Построение 3D прогноза для BTC-USD за 1 год</span><br>
+                    <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">think</span>().<span class="sh-fn">solve</span>(<span class="sh-str">"predict_3d"</span>, ticker=<span class="sh-str">"BTC-USD"</span>, period=<span class="sh-str">"1y"</span>)
+                </code>
             </div>
 
-            <p class="fw-bold" data-lang="expected_res"></p>
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <img src="additional/imgs/train02_spread.jpg" class="img-fluid rounded border shadow-sm">
+            <div class="mt-4">
+                <span class="result-label" data-lang="expected_res"></span>
+                <div class="text-center bg-white p-3 border rounded shadow-sm">
+                    <img src="additional/imgs/train03_3d.jpg" class="img-fluid rounded" alt="3D BTC Forecast">
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between mt-5">
-                <button class="btn btn-outline-secondary" onclick="navigate('train01')" data-lang="btn_prev"></button>
-                <button class="btn btn-primary px-5" onclick="navigate('train03')" data-lang="btn_next_lab"></button>
+            <div class="d-flex justify-content-between mt-5 pt-3 border-top">
+                <button class="btn btn-outline-secondary px-4 rounded-pill" onclick="navigate('train01')" data-lang="btn_prev_lab"></button>
+                <button class="btn btn-primary px-5 rounded-pill shadow-sm text-white" onclick="navigate('train03')" data-lang="btn_next_lab"></button>
             </div>
         </div>
     </div>

@@ -1,23 +1,30 @@
 <div class="container py-4 animate-fade-in">
     <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-        <div class="card-header bg-dark text-white py-3">
-            <h4 class="m-0" data-lang="task3_title"></h4>
+        <div class="card-header bg-info text-white py-3">
+            <h4 class="m-0" data-lang="task4_title"></h4>
         </div>
         <div class="card-body p-4">
-            <p class="lead" data-lang="task3_desc"></p>
+            <p class="lead" data-lang="task4_desc"></p>
             
-            <div class="bg-dark text-info p-3 rounded-3 font-monospace mb-4">
-                <pre class="m-0"># Single command for 3D analytical surface<br>ashaxiom.Axiom.think().solve("predict_3d", ticker="BTC-USD", period="1y")</pre>
+            <div class="result-label">Advanced Logic Input</div>
+            <div class="jupyter-cell">
+                <code>
+                    <span class="sh-cmt"># Поиск резонанса между ценой и трендом (Краснов + Фихтенгольц)</span><br>
+                    <span class="sh-var">res</span> = <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">think</span>().<span class="sh-fn">solve</span>(<span class="sh-str">"resonance"</span>, ticker=<span class="sh-str">"NVDA"</span>, order=<span class="sh-num">6</span>)<br>
+                    <span class="sh-fn">display</span>(<span class="sh-var">res</span>)
+                </code>
             </div>
 
-            <p class="fw-bold" data-lang="expected_res"></p>
-            <div class="text-center">
-                <img src="additional/imgs/train03_3d.jpg" class="img-fluid rounded border shadow-sm" style="max-height: 400px;">
+            <div class="mt-4">
+                <span class="result-label" data-lang="expected_res"></span>
+                <div class="bg-white p-3 border rounded shadow-sm">
+                    <img src="additional/imgs/train04_hybrid.jpg" class="img-fluid rounded" alt="Resonance Point">
+                </div>
             </div>
 
-            <div class="d-flex justify-content-between mt-5">
-                <button class="btn btn-outline-secondary" onclick="navigate('train02')" data-lang="btn_prev"></button>
-                <button class="btn btn-primary px-5" onclick="navigate('train04')" data-lang="btn_next_lab"></button>
+            <div class="d-flex justify-content-between mt-5 pt-3 border-top">
+                <button class="btn btn-outline-secondary px-4 rounded-pill" onclick="navigate('train02')" data-lang="btn_prev_lab"></button>
+                <button class="btn btn-primary px-5 rounded-pill shadow-sm text-white" onclick="navigate('train04')" data-lang="btn_next_lab"></button>
             </div>
         </div>
     </div>

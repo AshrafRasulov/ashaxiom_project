@@ -1,34 +1,82 @@
 <div class="container py-4 animate-fade-in">
-    <h1 class="fw-bold text-center mb-4" data-lang="train_title"></h1>
-    <p class="text-center text-muted mb-5" data-lang="train_p1"></p>
+    <!-- Заголовок секции -->
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-dark" data-lang="train_title"></h1>
+        <p class="text-muted lead mx-auto" style="max-width: 800px;" data-lang="train_p1"></p>
+    </div>
 
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="card h-100 border-0 shadow-sm">
-                <div class="card-header bg-primary text-white" data-lang="task1_title"></div>
-                <div class="card-body">
-                    <p class="small" data-lang="task1_desc"></p>
-                    <code class="d-block bg-light p-2 mb-3">.solve("market", ticker="AAPL").correlation_with("INTC")</code>
-                    <p class="fw-bold small" data-lang="expected_res"></p>
-                    <img src="additional/imgs/train01.jpg" class="img-fluid rounded border">
+    <div class="row g-5">
+        <!-- Задача 1: 3D Геометрия -->
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="card-header bg-primary text-white py-3 text-center">
+                    <h5 class="m-0" data-lang="task1_title"></h5>
+                </div>
+                <div class="card-body p-4">
+                    <p class="text-secondary mb-4" data-lang="task1_desc"></p>
+                    
+                    <div class="jupyter-cell">
+                        <code>
+                            <span class="sh-kw">import</span> <span class="sh-var">numpy</span> <span class="sh-kw">as</span> <span class="sh-var">np</span><br>
+                            <span class="sh-var">x</span>, <span class="sh-var">y</span> = <span class="sh-var">np</span>.<span class="sh-fn">meshgrid</span>(<span class="sh-var">np</span>.<span class="sh-fn">linspace</span>(-<span class="sh-num">2</span>, <span class="sh-num">2</span>, <span class="sh-num">20</span>), <span class="sh-var">np</span>.<span class="sh-fn">linspace</span>(-<span class="sh-num">2</span>, <span class="sh-num">2</span>, <span class="sh-num">20</span>))<br>
+                            <span class="sh-var">z</span> = <span class="sh-var">x</span>**<span class="sh-num">2</span> + <span class="sh-var">y</span>**<span class="sh-num">2</span><br>
+                            <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">start</span>(<span class="sh-var">z</span>).<span class="sh-fn">plot3D</span>(<span class="sh-var">x</span>, <span class="sh-var">y</span>)
+                        </code>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="result-label" data-lang="expected_res"></span>
+                        <div class="rounded-3 border overflow-hidden bg-white shadow-sm">
+                            <img src="additional/imgs/train01.jpg" class="img-fluid" alt="3D Geometry Result">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card h-100 border-0 shadow-sm">
-                <div class="card-header bg-warning" data-lang="task2_title"></div>
-                <div class="card-body">
-                    <p class="small" data-lang="task2_desc"></p>
-                    <code class="d-block bg-light p-2 mb-3">.solve("market", ticker="GC=F").annual_report()</code>
-                    <p class="fw-bold small" data-lang="expected_res"></p>
-                    <img src="additional/imgs/train02.jpg" class="img-fluid rounded border">
+
+        <!-- Задача 2: Спред Intel vs AMD (С ИСПРАВЛЕННЫМ КОДОМ) -->
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="card-header bg-warning text-dark py-3 text-center">
+                    <h5 class="m-0" data-lang="task2_title"></h5>
+                </div>
+                <div class="card-body p-4">
+                    <p class="text-secondary mb-4" data-lang="task2_desc"></p>
+
+                    <div class="jupyter-cell">
+                        <code>
+                            <span class="sh-cmt"># <span data-lang="code_task2_c1"></span></span><br>
+                            <span class="sh-var">t1</span> = <span class="sh-var">brain</span>.<span class="sh-fn">solve</span>(<span class="sh-str">"market"</span>, ticker=<span class="sh-str">"INTC"</span>, period=<span class="sh-str">"1y"</span>).<span class="sh-fn">lazy</span>()<br>
+                            <span class="sh-var">t2</span> = <span class="sh-var">brain</span>.<span class="sh-fn">solve</span>(<span class="sh-str">"market"</span>, ticker=<span class="sh-str">"AMD"</span>, period=<span class="sh-str">"1y"</span>).<span class="sh-fn">lazy</span>()<br>
+                            <span class="sh-var">results</span> = <span class="sh-var">brain</span>.<span class="sh-fn">add</span>(<span class="sh-var">t1</span>, <span class="sh-var">t2</span>).<span class="sh-fn">threadingOn</span>(<span class="sh-num">2</span>)<br><br>
+
+                            <span class="sh-cmt"># <span data-lang="code_task2_c2"></span></span><br>
+                            <span class="sh-var">spread</span> = <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">start</span>(<span class="sh-var">results</span>[<span class="sh-num">0</span>]).<span class="sh-fn">subtract</span>(<span class="sh-var">results</span>[<span class="sh-num">1</span>])<br><br>
+
+                            <span class="sh-cmt"># <span data-lang="code_task2_c3"></span></span><br>
+                            <span class="sh-var">report</span> = <span class="sh-var">spread</span>.<span class="sh-fn">annual_report</span>().<span class="sh-fn">precision</span>(<span class="sh-num">2</span>)<br>
+                            <span class="sh-fn">display</span>(<span class="sh-var">report</span>)
+                        </code>
+                    </div>
+
+                    <div class="mt-4">
+                        <span class="result-label" data-lang="expected_res"></span>
+                        <div class="rounded-3 border overflow-hidden bg-white shadow-sm">
+                            <img src="additional/imgs/train02.jpg" class="img-fluid" alt="Spread Analysis Result">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="d-flex justify-content-center gap-3 mt-5">
-        <button class="btn btn-outline-dark" onclick="navigate('home')" data-lang="btn_home"></button>
-        <button class="btn btn-primary px-5 shadow" onclick="navigate('train02')" data-lang="btn_next"></button>
+    <!-- Навигация -->
+    <div class="d-flex justify-content-center gap-4 mt-5 pt-5 border-top">
+        <button class="btn btn-outline-dark btn-lg px-5 rounded-pill fw-bold" onclick="navigate('home')">
+            <span data-lang="btn_home"></span>
+        </button>
+        <button class="btn btn-primary btn-lg px-5 rounded-pill shadow fw-bold text-white" onclick="navigate('train02')">
+            <span data-lang="btn_next_lab"></span>
+        </button>
     </div>
 </div>

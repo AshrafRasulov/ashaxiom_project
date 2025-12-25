@@ -1,24 +1,33 @@
 <div class="container py-4 animate-fade-in">
-    <div class="card border-0 shadow-sm p-4 rounded-4">
-        <h1 class="text-info fw-bold" data-lang="l3_title"></h1>
+    <div class="card border-0 shadow-lg rounded-4 p-4">
+        <h1 class="text-info fw-bold display-6" data-lang="l3_title"></h1>
         <p class="lead mt-3" data-lang="l3_p1"></p>
 
-        <h4 class="mt-5" data-lang="l3_step1"></h4>
-        <p data-lang="l3_desc1"></p>
-        <div class="bg-dark text-light p-3 rounded-3 font-monospace my-3">
-            <pre class="m-0">brain = ashaxiom.Axiom.think()<br>brain.solve("fourier", expr="x", n=3)</pre>
-        </div>
-        <div class="text-center my-4"><img src="pages/imgs/lesson03_brain.jpg" class="img-fluid rounded shadow border"></div>
+        <hr class="my-4 opacity-25">
 
-        <h4 class="mt-5" data-lang="l3_step2"></h4>
-        <p data-lang="l3_desc2"></p>
-        <div class="bg-dark text-light p-3 rounded-3 font-monospace my-3">
-            <pre class="m-0">print(brain.sections().show())</pre>
+        <h4 class="fw-bold" data-lang="l3_step1"></h4>
+        <p data-lang="l3_desc1"></p>
+        
+        <div class="jupyter-cell shadow-sm">
+            <code>
+                <span class="sh-var">brain</span> = <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">think</span>()<br>
+                <span class="sh-cmt"># AI will find 'fourier_expansion' and map 'expr' automatically</span><br>
+                <span class="sh-var">res</span> = <span class="sh-var">brain</span>.<span class="sh-fn">solve</span>(<span class="sh-str">"fourier"</span>, expr=<span class="sh-str">"x"</span>, n=<span class="sh-num">3</span>)<br>
+                <span class="sh-fn">display</span>(<span class="sh-var">res</span>)
+            </code>
+        </div>
+
+        <div class="text-center my-4">
+            <img src="pages/imgs/lesson03_brain.jpg" class="img-fluid rounded-3 shadow border" alt="AI Logic">
+        </div>
+
+        <div class="alert alert-success border-0 shadow-sm">
+            <strong>Knowledge Discovery:</strong> AshAxiom uses metadata to cite every source it uses in the report.
         </div>
 
         <div class="d-flex justify-content-between mt-5 pt-3 border-top">
-            <button class="btn btn-outline-secondary" onclick="navigate('lesson02')" data-lang="btn_prev"></button>
-            <button class="btn btn-primary px-5" onclick="navigate('lesson04')" data-lang="btn_next"></button>
+            <button class="btn btn-outline-secondary px-4 rounded-pill fw-bold" onclick="navigate('lesson02')" data-lang="btn_prev"></button>
+            <button class="btn btn-primary px-5 rounded-pill shadow-sm fw-bold" onclick="navigate('lesson04')" data-lang="btn_next"></button>
         </div>
     </div>
 </div>

@@ -1,54 +1,60 @@
-html, body {
-    height: 100%;
-    margin: 0;
+/* Flexbox Layout for Sticky Footer */
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; min-height: 100vh; background-color: #f4f7f6; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+#app-root { flex: 1 0 auto; }
+footer { flex-shrink: 0; background-color: #ffffff; padding: 20px 0; border-top: 1px solid #dee2e6; }
+
+/* Hero & General Styles */
+.hero-section { height: 50vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509228463558-ce13810f801e?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; border-bottom: 5px solid #0056b3; }
+.card { transition: transform 0.3s ease, box-shadow 0.3s ease; border: none; border-radius: 15px; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important; }
+
+/* Jupyter Syntax Highlighting */
+.sh-kw  { color: #008000; font-weight: bold; } /* Keywords: import, from, as, def, return */
+.sh-str { color: #ba2121; }                   /* Strings: "NVDA", 'x' */
+.sh-fn  { color: #0000FF; }                   /* Functions/Methods: .solve, .think, .start */
+.sh-cmt { color: #408080; font-style: italic; } /* Comments: # This is a comment */
+.sh-num { color: #080; }                      /* Numbers: 10, 0.5, 1y */
+.sh-var { color: #19177c; }                   /* Variables/Objects: res, brain, report */
+
+/* Jupyter Cell Styling - Exact notebook copy */
+/* Исправленная ячейка Jupyter */
+.jupyter-cell {
+    background-color: #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-left: 5px solid #2196f3; 
+    border-radius: 2px;
+    padding: 10px 15px;
+    /* Добавляем отступ слева, чтобы In []: поместился внутри карточки */
+    margin: 20px 0 20px 65px; 
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Минимальная высота - весь экран */
-    background-color: #f4f7f6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.jupyter-cell::before {
+    content: "In [ ]:";
+    position: absolute;
+    /* Позиционируем подпись ровно в созданном отступе */
+    left: -65px; 
+    top: 10px;
+    color: #303f9f;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: sans-serif;
 }
 
-#app-root {
-    flex: 1 0 auto; /* Этот блок растягивается и толкает футер вниз */
-}
+.jupyter-cell code { color: #111; font-size: 14px; line-height: 1.6; background: none; padding: 0; }
+.text-comment { color: #6a737d; font-style: italic; } /* Comment color in code */
 
-footer {
-    flex-shrink: 0; /* Футер не сжимается */
-    background-color: #ffffff;
-}
-
-/* Остальные стили */
-.hero-section {
-    height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1509228463558-ce13810f801e?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    border-bottom: 5px solid #0056b3;
-}
-
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none;
-    border-radius: 15px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-
-.icon-box {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-/* Фикс для пустых кнопок до загрузки JS */
-button[data-lang]:empty::before {
-    content: "Loading...";
-    font-size: 12px;
-    opacity: 0.5;
+.result-label {
+    display: inline-block;
+    background: #e1f5fe;
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #01579b;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
 }

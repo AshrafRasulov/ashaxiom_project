@@ -1,27 +1,47 @@
 <div class="container py-4 animate-fade-in">
-    <div class="card border-0 shadow-sm p-4 rounded-4">
-        <h1 class="text-success fw-bold" data-lang="l2_title"></h1>
-        <p class="lead mt-3" data-lang="l2_p1"></p>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="navigate('home')" data-lang="btn_home"></a></li>
+            <li class="breadcrumb-item active" data-lang="l2_title"></li>
+        </ol>
+    </nav>
 
-        <h4 class="mt-5" data-lang="l2_step1"></h4>
-        <div class="bg-dark text-info p-3 rounded-3 font-monospace my-3 shadow">
-            <pre class="m-0">data = [10, 50, 20, 80, 40]<br>ashaxiom.Axiom.start(data).plot2D()</pre>
+    <div class="card border-0 shadow-lg rounded-4 p-4">
+        <h1 class="text-success fw-bold display-6" data-lang="l2_title"></h1>
+        <p class="lead" data-lang="l2_p1"></p>
+
+        <hr class="my-4 opacity-25">
+
+        <!-- 2D Graph -->
+        <h4 class="fw-bold" data-lang="l2_step1"></h4>
+        <div class="jupyter-cell shadow-sm">
+            <code>
+                <span class="sh-var">data</span> = [<span class="sh-num">10</span>, <span class="sh-num">50</span>, <span class="sh-num">20</span>, <span class="sh-num">80</span>, <span class="sh-num">40</span>]<br>
+                <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">start</span>(<span class="sh-var">data</span>).<span class="sh-fn">plot2D</span>()
+            </code>
         </div>
         <div class="text-center my-4">
-            <img src="pages/imgs/lesson02_2d.jpg" class="img-fluid rounded shadow" alt="2D Graph">
+            <img src="pages/imgs/lesson02_2d.jpg" class="img-fluid rounded-3 shadow border" alt="2D Graph">
         </div>
 
-        <h4 class="mt-5" data-lang="l2_step2"></h4>
-        <div class="bg-dark text-info p-3 rounded-3 font-monospace my-3 shadow">
-            <pre class="m-0">import numpy as np<br><span class="text-muted" data-lang="lsn2_commit"></span><br>x, y = np.meshgrid(np.linspace(-2,2,20), np.linspace(-2,2,20))<br>z = x**2 + y**2<br>ashaxiom.Axiom.start(z).plot3D(x, y)</pre>
+        <!-- 3D Surfaces -->
+        <h4 class="fw-bold mt-5" data-lang="l2_step2"></h4>
+        <div class="jupyter-cell shadow-sm">
+            <code>
+                <span class="sh-kw">import</span> <span class="sh-var">numpy</span> <span class="sh-kw">as</span> <span class="sh-var">np</span><br>
+                <span class="sh-cmt" data-lang="lsn2_commit"></span><br>
+                <span class="sh-var">x</span>, <span class="sh-var">y</span> = <span class="sh-var">np</span>.<span class="sh-fn">meshgrid</span>(<span class="sh-var">np</span>.<span class="sh-fn">linspace</span>(-<span class="sh-num">2</span>,<span class="sh-num">2</span>,<span class="sh-num">20</span>), <span class="sh-var">np</span>.<span class="sh-fn">linspace</span>(-<span class="sh-num">2</span>,<span class="sh-num">2</span>,<span class="sh-num">20</span>))<br>
+                <span class="sh-var">z</span> = <span class="sh-var">x</span>**<span class="sh-num">2</span> + <span class="sh-var">y</span>**<span class="sh-num">2</span><br>
+                <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">start</span>(<span class="sh-var">z</span>).<span class="sh-fn">plot3D</span>(<span class="sh-var">x</span>, <span class="sh-var">y</span>)
+            </code>
         </div>
         <div class="text-center my-4">
-            <img src="pages/imgs/lesson02_3d.jpg" class="img-fluid rounded shadow" alt="3D Graph">
+            <img src="pages/imgs/lesson02_3d.jpg" class="img-fluid rounded-3 shadow border" alt="3D Graph">
         </div>
 
         <div class="d-flex justify-content-between mt-5 pt-3 border-top">
-            <button class="btn btn-outline-secondary" onclick="navigate('lesson01')" data-lang="btn_prev"></button>
-            <button class="btn btn-primary px-5" onclick="navigate('lesson03')" data-lang="btn_next"></button>
+            <button class="btn btn-outline-secondary px-4 rounded-pill fw-bold" onclick="navigate('lesson01')" data-lang="btn_prev"></button>
+            <button class="btn btn-primary px-5 rounded-pill shadow-sm fw-bold" onclick="navigate('lesson03')" data-lang="btn_next"></button>
         </div>
     </div>
 </div>
