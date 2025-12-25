@@ -12,4 +12,4 @@ class Axiom:
 
     @staticmethod
     def version():
-        return "2.1.0 (Expert System Standard)"
+        return "2.2.0 (Academy Edition)"

@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
