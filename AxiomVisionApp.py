@@ -1,43 +1,32 @@
 import ashaxiom
-from pix2tex.cli import LatexOCR
-from PIL import Image
-import sympy as sp
 
 class AxiomVisionBridge:
     """
-    Stand-alone application that uses specialized AI 
-    to read complex math and execute AshAxiom library.
+    Stand-alone application that executes AshAxiom library 
+    based on manual input or direct task strings.
+    (LatexOCR removed as per project update)
     """
     def __init__(self):
-        print("[Vision App] Loading Mathematical Neural Network...")
-        self.model = LatexOCR() # Specialized AI for Math
+        print("[Vision App] Axiom System Bridge Active.")
         self.axiom = ashaxiom.Axiom.think()
 
-    def process_and_solve(self, image_path):
-        print(f"[Vision App] Analyzing image: {image_path}")
+    def process_and_solve(self, task_type, task_input):
+        """
+        Directly calls the Axiom Brain to solve a task.
+        task_type: e.g., 'integral', 'limit', 'predict_3d'
+        task_input: the expression or ticker
+        """
+        print(f"[Vision App] Processing Task: {task_type}")
+        print(f"[Vision App] Input: {task_input}")
         
-        # 1. AI reads the formula as LaTeX
-        img = Image.open(image_path)
-        latex_code = self.model(img)
-        print(f"[Vision App] Recognized LaTeX: {latex_code}")
-        
-        # 2. Convert LaTeX to SymPy (so AshAxiom can understand it)
-        # We try to find keywords like 'exp', 'sin', 'log' to guess the task
-        task_query = ""
-        if "exp" in latex_code or "sigma" in latex_code:
-            task_query = "probability" # If it looks like distribution
-        elif "int" in latex_code:
-            task_query = "integrate"
-            
-        print(f"[Vision App] Intent detected: {task_query}")
-        
-        # 3. Call the library to solve
-        # (For now, let's just simplify the recognized expression as a test)
-        res = self.axiom.solve('simplify', expr=latex_code)
+        # Call the library to solve
+        # The Brain will automatically find the best expert(s)
+        res = self.axiom.solve(task_type, expr=task_input, ticker=task_input)
         return res
 
 if __name__ == "__main__":
     app = AxiomVisionBridge()
-    # Replace with your actual file 'task.jpg'
-    result = app.process_and_solve("task.jpg")
-    display(result)
+    # Example: solve an integral
+    result = app.process_and_solve("integral", "x**2 + sin(x)")
+    # If in Jupyter, result will display via its _repr_html_
+    print(result)
