@@ -1,0 +1,25 @@
+{
+  "mod_title": "Bozor intellekti",
+
+  "l01_title": "AI moliyaviy hisobotlari",
+  "l01_desc": "Jonli ma'lumotlarni yig'ish, avtomatlashtirilgan ekspert hisoboti va aniqlik nazoratini bitta zanjirda birlashtirish.",
+  "cmt_l01": "Standart: ticker (Aktiv), period (Vaqt oraliği)",
+  "cmt_l01_suffix": "Yillik statistika va Merfi insaytlarini ko'rsatadi",  
+
+  "l02_title": "Moslashuvchan vaqt oraliqlari",
+  "l02_desc": "AshAxiom miyasi vaqt oraliqlarini (1y, 2y, max) avtomatik aniqlash va sozlash imkoniyatiga ega.",
+  "l03_title": "Bozorlararo qonunlar (Merfi)",
+  "l03_desc": "Klassik savdo qoidalariga asoslanib turli aktivlar (Obligatsiyalar va Tovarlar) o'rtasidagi bog'liqlikni tahlil qilish.",
+  "l04_title": "Blokcheyn xavfsizligi (Satoshi)",
+  "l04_desc": "Bitcoin Whitepaper-dagi Puasson modeliga asoslanib tarmoqqa hujum qilish muvaffaqiyati ehtimolini hisoblash.",
+  "l05_title": "3D Teylor bashorati",
+  "l05_desc": "Kelajakni vizuallashtirish: murakkablik sirtini qurish va ekspert xulosasi chizig'ini ajratib ko'rsatish.",
+  "l06_title": "Ma'lumotlarni chuqur ajratish",
+  "l06_desc": "DataConverter yordamida murakkab javoblar ichidan kerakli JSON tuzilmalarini yoki klass obyektlarini qidirib topish.",
+  
+  "cmt_l02": "Bozor mantig'ida vaqt oraliqlarini avtomatik aniqlash",
+  "cmt_l03": "Bozorlararo bog'liqlik uchun Merfi qonunini qo'llash",
+  "cmt_l04": "Blokcheyn xavfsizligi: Hujum ehtimoli modeli",
+  "cmt_l05": "Bashorat uchun 3D Teylor proyeksiyasini qurish",
+  "cmt_l06": "Maxsus ma'lumotlar tuzilmalarini chuqur qidirish"
+}

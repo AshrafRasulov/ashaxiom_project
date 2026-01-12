@@ -1,0 +1,41 @@
+<div class="container py-4 animate-fade-in">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="navigate('home')" data-lang="btn_home"></a></li>
+            <li class="breadcrumb-item active"><span data-lang="mod_title"></span></li>
+        </ol>
+    </nav>
+
+    <div class="card border-0 shadow-lg rounded-4 p-4">
+        <!-- Dynamic Header with Auto-Numbering -->
+        <h2 class="text-warning fw-bold">
+            <span data-lang="mod_title"></span>: <span data-lang="lesson_label"></span> <span data-lesson-num></span>
+        </h2>
+        <h4 class="fw-bold text-dark" data-lang="l01_title"></h4>
+        <p class="lead" data-lang="l01_desc"></p>
+
+        <!-- Jupyter Cell with Exact Test 11 Code -->
+        <div class="jupyter-cell shadow-sm">
+            <code>
+                <span class="sh-cmt"># <span data-lang="cmt_l01"></span></span><br>
+                <span class="sh-var">market_res</span> = <span class="sh-var">brain</span>.<span class="sh-fn">solve</span>(<span class="sh-str">"market"</span>, ticker=<span class="sh-str">"AAPL"</span>, period=<span class="sh-str">"1y"</span>).<span class="sh-fn">precision</span>(<span class="sh-num">2</span>)<br>
+                <span class="sh-fn">display</span>(<span class="sh-var">market_res</span>) <span class="sh-cmt"># <span data-lang="cmt_l01_suffix"></span></span>
+            </code>
+        </div>
+
+        <!-- Visual Result -->
+        <div class="mt-4">
+            <span class="result-label" data-lang="expected_res"></span>
+            <div class="text-center p-3 bg-white border rounded shadow-sm">
+                <img src="pages/trading/imgs/lesson01.jpg" class="img-fluid" alt="Annual Report Result">
+            </div>
+        </div>
+
+        <!-- Universal Navigation (prev/next) -->
+        <div class="d-flex justify-content-between mt-5 pt-3 border-top">
+            <button class="btn btn-outline-secondary px-4 rounded-pill fw-bold" onclick="navigate('prev')" data-lang="btn_prev"></button>
+            <button class="btn btn-primary px-5 rounded-pill shadow-sm fw-bold" onclick="navigate('next')" data-lang="btn_next"></button>
+        </div>
+    </div>
+</div>

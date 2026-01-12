@@ -1,0 +1,18 @@
+{
+  "mod_title": "Vizual intellekt",
+  "l01_title": "Sinxronlangan 2D grafiklar",
+  "l01_desc": "AshAxiom-ning noyob dvigateli bir nechta aktivlarni bitta grafikda turli kalendarlarga moslab ko'rsatadi.",
+  "l02_title": "Spred tahlili (Spread)",
+  "l02_desc": ".toCorrectNumberYX('y') metodi orqali narxlarni ajratib olish va raqobatchilar o'rtasidagi farqni hisoblash.",
+  "l03_title": "3D sirtlarni qurish",
+  "l03_desc": "Murakkab matematik landshaftlarni tahlil qilish uchun .plot3D() yuqori darajali metodidan foydalanish.",
+  "l04_title": "Stilizatsiya va Ranglar",
+  "l04_desc": ".color() orqali grafiklarning ko'rinishini sozlash. RGB va gradiyentlarni qo'llab-quvvatlash.",
+  "l05_title": "Koordinata ko'prigi",
+  "l05_desc": "Miya qanday qilib xom ma'lumotlarni chizishga tayyor intellektual koordinata tuzilmalariga aylantiradi.",
+  "cmt_l01": "Bir nechta aktivlarni bitta vaqt o'qida sinxronlash",
+  "cmt_l02": "Y-o'qini ajratib olish va bozor spredini hisoblash",
+  "cmt_l03": "Xom 3D meshgrid sirtini vizuallashtirish",
+  "cmt_l04": "Maxsus RGB va gradiyent stillarini qo'llash",
+  "cmt_l05": "Xom ma'lumotlarni koordinata tuzilmalariga o'tkazish"
+}

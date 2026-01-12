@@ -1,10 +1,26 @@
-ashaxiom/
-├── lib/
-│   ├── brain/         # Axiom Intelligence & Logic
-│   ├── graph/         # 2D/3D Plotting Engine
-│   ├── hMath/         # Core Math & Author-specific Books
-│   │   └── hmBooks/   # Organized by Authors/Collections
-│   ├── data/          # Export Modules (Excel/JSON)
-│   ├── symbolic/      # SymPy Wrappers
-│   └── application.py # State Manager & HTML Explorer
-└── core.py            # Main API Entry Point
+ashaxiom_project/
+├── ashaxiom/
+│   ├── core.py                   <-- System Gateway (think, start, static_2D)
+│   ├── __init__.py               <-- Global entry point
+│   ├── lib/
+│   │   ├── application.py        <-- The "Body" (Lazy Styling, UI Repr, Spawning)
+│   │   ├── libPiper.py           <-- The "DNA" (Dynamic Inheritance Engine)
+│   │   ├── main.py                <-- Main active class (AxiomMain)
+│   │   ├── brain/
+│   │   │   ├── AxiomIntelligence.py <-- The "Orchestrator" (Parallel Dispatcher)
+│   │   │   ├── brain_config.py      <-- The "Control Center" (Golden Standard Map)
+│   │   │   ├── update/              <-- The "Expansion Slot" (JSON AI Capsules)
+│   │   │   └── libBrain/            <-- Capability and Method Mappers
+│   │   ├── aMathBSLib/              <-- Applied Math & Trading Branch
+│   │   │   ├── hTradingAnalis.py    <-- Market Intelligence & Reports
+│   │   │   ├── tradeBookBS1000/     <-- Finance Libraries (Murphy, Satoshi, Varian)
+│   │   │   └── ahmMBooksBS1000/     <-- Academic Libraries (Zorich, Kudryavtsev)
+│   │   ├── hMathBSLib/              <-- Core Math Branch
+│   │   │   ├── hmath.py             <-- Operator Overloading & Basic Math
+│   │   │   └── hmBooksBS1000/       <-- Fundamental Math (Fikhtengolts, Krasnov)
+│   │   ├── graph/
+│   │   │   └── hGraph.py            <-- Visualization Engine (2D/3D Sync)
+│   │   └── pipUtil/                 <-- Utilities (DataConverter, Console, Engine)
+├── ashaxiom-lesson/              <-- Interactive Academy (Local Server Content)
+├── setup.py                      <-- Package Configuration
+└── README.md                     <-- Global Introduction

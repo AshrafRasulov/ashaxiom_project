@@ -18,14 +18,14 @@ footer { flex-shrink: 0; background-color: #ffffff; padding: 20px 0; border-top:
 .sh-var { color: #19177c; }                   /* Variables/Objects: res, brain, report */
 
 /* Jupyter Cell Styling - Exact notebook copy */
-/* Исправленная ячейка Jupyter */
+/* fixed rage of Jupyter */
 .jupyter-cell {
     background-color: #f7f7f7;
     border: 1px solid #cfcfcf;
     border-left: 5px solid #2196f3; 
     border-radius: 2px;
     padding: 10px 15px;
-    /* Добавляем отступ слева, чтобы In []: поместился внутри карточки */
+    /* Adding left margin so that "In []:" fits inside the card */
     margin: 20px 0 20px 65px; 
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     position: relative;
@@ -35,7 +35,7 @@ footer { flex-shrink: 0; background-color: #ffffff; padding: 20px 0; border-top:
 .jupyter-cell::before {
     content: "In [ ]:";
     position: absolute;
-    /* Позиционируем подпись ровно в созданном отступе */
+    /* Position the label exactly in the created margin */
     left: -65px; 
     top: 10px;
     color: #303f9f;
@@ -57,4 +57,24 @@ footer { flex-shrink: 0; background-color: #ffffff; padding: 20px 0; border-top:
     margin-bottom: 10px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.dropdown-menu-end {
+    min-width: 130px; /* Fixed width for the entire list */
+    padding: 5px 0;
+}
+
+.dropdown-item.lang-item {
+    display: flex;
+    justify-content: space-between; /* Text to the left, flag to the right */
+    align-items: center;
+    padding: 8px 15px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+}
+
+.dropdown-item.lang-item img {
+    margin-left: 10px; /* padding between text and flag */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Eazy Shadow between flg and text */
+    border-radius: 2px;
 }

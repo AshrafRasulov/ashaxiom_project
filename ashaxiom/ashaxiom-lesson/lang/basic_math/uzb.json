@@ -1,0 +1,18 @@
+{
+  "mod_title": "Boshlang'ich matematika",
+  "l01_title": "Metodlar zanjiri (Piping)",
+  "l01_desc": "AshAxiom hisob-kitob zanjirlarini qurish imkonini beradi. Har bir metod 'self' obyektini qaytaradi.",
+  "l02_title": "Massivlar bilan ishlash",
+  "l02_desc": "Tizim ro'yxatlarni avtomatik taniydi va matematik amallarni barcha elementlarga bir vaqtda qo'llaydi.",
+  "l03_title": "Aniqlik nazorati",
+  "l03_desc": "Expert Explorer-da sonlarni yaxlitlash uchun .precision() metodidan foydalaning.",
+  "l04_title": "Matematik konstantalar",
+  "l04_desc": "Pi va E sonlari bilan ishlash. AshAxiom hisob-kitoblarda yuqori aniqlikni saqlab qoladi.",
+  "l05_title": "Eksport konveyeri",
+  "l05_desc": "Natijalarni bevosita zanjir oxirida JSON va Excel formatlarida saqlashingiz mumkin.",
+  "cmt_l01": "Tizimni ishga tushirish va hisoblash zanjirini boshlash",
+  "cmt_l02": "Ma'lumotlar to'plami ustida amallarni bajarish",
+  "cmt_l03": "Explorer interfeysi uchun aniqlik darajasini o'rnatish",
+  "cmt_l04": "Irratsional sonlar (Pi, E) uchun aniqlik nazorati",
+  "cmt_l05": "Ma'lumotlarni universal JSON va Excel formatlariga eksport qilish"
+}

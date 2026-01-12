@@ -1,0 +1,22 @@
+{
+  "mod_title": "Базовая математика",
+  "l01_title": "Цепочки вызовов (Piping)",
+  "l01_desc": "AshAxiom позволяет строить бесконечные цепочки вычислений. Каждый метод возвращает объект 'self'.",
+  "cmt_l01": "Initialize system and start a computation chain",
+  
+  "l02_title": "Работа с массивами",
+  "l02_desc": "Система автоматически применяет математические операции ко всем элементам списка сразу.",
+  "cmt_l02": "Execute operations on a collection of data",
+
+  "l03_title": "Контроль точности",
+  "l03_desc": "Используйте метод .precision() для визуального округления чисел в Expert Explorer.",
+  "cmt_l03": "Set numeric output precision for Explorer UI",
+
+  "l04_title": "Числовые константы",
+  "l04_desc": "Работа с числами Pi и E. AshAxiom сохраняет высокую точность при вычислениях.",
+  "cmt_l04": "Precision control for irrational numbers (Pi, E)",
+
+  "l05_title": "Конвейер экспорта",
+  "l05_desc": "Вы можете сохранять результаты в форматы JSON и Excel прямо в конце цепочки команд.",
+  "cmt_l05": "Export data to universal JSON and Excel structures"
+}

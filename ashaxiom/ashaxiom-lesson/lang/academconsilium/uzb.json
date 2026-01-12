@@ -1,0 +1,21 @@
+{
+  "mod_title": "Akademik kengash",
+  "l01_title": "Bilimlar navigatsiyasi",
+  "l01_desc": "AshAxiom kutubxonasi tuzilishini dasturiy o'rganish va sohalar hamda mualliflarni mustaqil qidirish.",
+  "l02_title": "Analitik limitlar (Zorich)",
+  "l02_desc": "Limitlarni qat'iy akademik yondashuv bilan yechish. Argumentlarning 'Oltin Standart'idan foydalanish.",
+  "l03_title": "Furye qatorlari (Kengash)",
+  "l03_desc": "Parallel hisoblash. Tizim bir vaqtning o'zida bir nechta muallifdan javob oladi.",
+  "l04_title": "Analitik geometriya (Krasnov)",
+  "l04_desc": "Uchta nuqta orqali tekislik tenglamasini qurish va nuqtadan tekislikkacha bo'lgan masofani hisoblash.",
+  "l05_title": "Vektorli tahlil (CURL)",
+  "l05_desc": "Vektor maydonining rotorini (aylanishini) hisoblash. SymPy ramziy mantiqidan foydalanish.",
+  "l06_title": "To'lqin tenglamasi (PDE)",
+  "l06_desc": "Xususiy hosilali differensial tenglamalarni yechish va jismoniy jarayonlarni modellashtirish.",
+  "cmt_l01": "Barcha mavjud kutubxona tarmoqlarini tekshirish",
+  "cmt_l02": "Zorich mantig'i bilan limitni analitik yechish",
+  "cmt_l03": "Bir nechta Furye ekspertlarini parallel ishga tushirish",
+  "cmt_l04": "Tekislik qurish va masofani hisoblash",
+  "cmt_l05": "Vektor maydonining rotorini (Curl) hisoblash",
+  "cmt_l06": "Xususiy hosilali to'lqin tenglamasini yechish"
+}

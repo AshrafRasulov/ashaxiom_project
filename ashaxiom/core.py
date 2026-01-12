@@ -1,54 +1,34 @@
-# from .lib.main import AxiomMain
-# from .lib.brain.AxiomIntelligence import BrainCore
-
-# class Axiom:
-#     @staticmethod
-#     def start(initial_value=0):
-#         return AxiomMain(initial_value)
-    
-#     @staticmethod
-#     def think(mode="solve"):
-#         return BrainCore(AxiomMain(), mode=mode)
-    
-#     @staticmethod
-#     def static_metod(*args):
-#         """Собирает список GraphicConfig для мульти-графика."""
-#         return list(args)
-
-#     @staticmethod
-#     def static_2D(data_list):
-#         """Рисует синхронизированный 2D график. Импорт внутри для стабильности."""
-#         from .lib.graph.hGraph import hGraph
-#         return hGraph().render_static_2D(data_list)
-
-#     @staticmethod
-#     def version():
-#         return "2.3.5 (Full Integration Edition)"
-
-
 from .lib.main import AxiomMain
 from .lib.brain.AxiomIntelligence import BrainCore
 
 class Axiom:
+    """
+    Main Gateway for AshAxiom Framework.
+    Provides entry points for direct math computation, intelligent analysis, 
+    and synchronized visualization.
+    """
     @staticmethod
     def start(initial_value=0):
+        """Initializes the Axiom core with a starting numeric value or collection."""
         return AxiomMain(initial_value)
     
     @staticmethod
     def think(mode="solve"):
+        """Initializes the Parallel Intelligence engine for expert consensus."""
         return BrainCore(AxiomMain(), mode=mode)
     
     @staticmethod
     def static_metod(*args):
-        """Собирает список объектов для мульти-графика."""
+        """Helper to aggregate multiple Axiom objects into a list for batch rendering."""
         return list(args)
 
     @staticmethod
     def static_2D(data_list):
-        """Синхронизированная 2D визуализация."""
+        """Triggers synchronized 2D rendering for multi-asset comparison."""
         from .lib.graph.hGraph import hGraph
         return hGraph().render_static_2D(data_list)
 
     @staticmethod
     def version():
-        return "2.3.8 (Consolidated Global Edition)"
+        """Returns the current framework version (Global Intelligence Edition)."""
+        return "2.4.3 (Consolidated Global Edition)"

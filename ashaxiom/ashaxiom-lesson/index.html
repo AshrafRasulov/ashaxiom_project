@@ -4,46 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AshAxiom Academy</title>
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
         <div class="container">
-            <a class="navbar-brand" href="#" onclick="navigate('home')">
-                <span class="text-primary">Ash</span>Axiom 🎓
+            <a class="navbar-brand fw-bold" href="#" onclick="navigate('home')">
+                <span class="text-primary">Ash</span>Axiom <span class="badge bg-primary" style="font-size: 10px;">v2.4.1</span>
             </a>
-            <div class="collapse navbar-collapse">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="navigate('lesson01')" data-lang="nav_guide">Guide</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="navigate('train01')" data-lang="nav_practice">Practice</a></li>
+                    <!-- Список Обучения (Dropdown) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="learningDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-lang="nav_guide">
+                            Обучение
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark shadow" aria-labelledby="learningDrop">
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigate('basic_math')">🔢 <span data-lang="lvl1_title"></span></a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigate('visualization')">📊 <span data-lang="lvl2_title"></span></a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigate('academconsilium')">🏛️ <span data-lang="lvl3_title"></span></a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigate('trading')">🚀 <span data-lang="lvl4_title"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navigate('train01')" data-lang="nav_practice">Лаборатория</a>
+                    </li>
                 </ul>
-                <!-- Language Selector -->
+
+                <!-- Селектор Языка (Dropdown) -->
                 <div class="dropdown">
-                    <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
-                        <img id="currentLangFlag" src="img/Eng.png" width="20" class="me-2"> 
-                        <span id="currentLangName">ENG</span>
+                    <button class="btn btn-outline-light btn-sm dropdown-toggle d-flex align-items-center" type="button" id="langDrop" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img id="currentLangFlag" src="img/Ru.png" width="18" class="me-2"> 
+                        <span id="currentLangName">RU</span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" onclick="changeLang('ENG', 'Eng.png')">🇺🇸 English</a></li>
-                        <li><a class="dropdown-item" onclick="changeLang('RU', 'Ru.png')">🇷🇺 Русский</a></li>
-                        <li><a class="dropdown-item" onclick="changeLang('UZB', 'Uzb.png')">🇺🇿 O'zbek</a></li>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="langDrop">
+                        <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="changeLang('ENG', 'Eng.png')">US English<img id="currentLangFlag" src="img/Eng.png" width="18" class="me-2"></a></li>
+                        <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="changeLang('RU', 'Ru.png')">RU Русский<img id="currentLangFlag" src="img/Ru.png" width="18" class="me-2"> </a></li>
+                        <li><a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="changeLang('UZB', 'Uzb.png')">UZ O'zbek<img id="currentLangFlag" src="img/Uzb.png" width="18" class="me-2"></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Динамический контент -->
-    <main id="app-root"></main>
+    <!-- Content Area -->
+    <main id="app-root" class="flex-grow-1"></main>
 
-    <footer class="text-center py-4 border-top bg-dark">
-        <p class="text-muted m-0">&copy; 2025 AshAxiom Academy | Built by Ashraf Rasulov</p>
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white-50 border-top mt-auto">
+        <p class="m-0" data-lang="footer_text"></p>
     </footer>
 
+    <!-- Важен порядок: сначала BUNDLE (с Popper), потом основной JS -->
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>

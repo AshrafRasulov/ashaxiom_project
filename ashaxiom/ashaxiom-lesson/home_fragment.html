@@ -1,32 +1,58 @@
-<header class="hero-section text-center text-white d-flex align-items-center">
+<header class="hero-section text-center text-white d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1350&q=80'); background-size: cover;">
     <div class="container animate-slide-up">
-        <h1 class="display-3 fw-bold" data-lang="hero_welcome">Welcome to AshAxiom Academy</h1>
-        <p class="lead mb-4" data-lang="hero_desc">Your path to mastering math and finance.</p>
+        <h1 class="display-3 fw-bold" data-lang="hero_welcome"></h1>
+        <p class="lead mb-4" data-lang="hero_desc"></p>
         <div class="d-flex justify-content-center gap-3">
-            <button onclick="navigate('lesson01')" class="btn btn-primary btn-lg px-4" data-lang="btn_start">Start</button>
-            <button onclick="navigate('train01')" class="btn btn-outline-light btn-lg px-4" data-lang="btn_view">Practice</button>
+            <!-- Начинаем обучение с первого модуля по умолчанию -->
+            <button onclick="navigate('basic_math')" class="btn btn-primary btn-lg px-5 shadow rounded-pill fw-bold" data-lang="btn_start"></button>
+            <button onclick="navigate('train01')" class="btn btn-outline-light btn-lg px-5 rounded-pill fw-bold" data-lang="btn_view"></button>
         </div>
     </div>
 </header>
 
 <div class="container my-5 animate-fade-in-delayed">
     <div class="row g-4">
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm border-primary" onclick="navigate('lesson01')" style="cursor:pointer">
+        <!-- Level 1: Basic Math -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-primary" onclick="navigate('basic_math')" style="cursor:pointer">
                 <div class="card-body p-4 text-center">
-                    <div class="icon-box mb-3">📚</div>
-                    <h3 data-lang="card_guide_title">Full Guide</h3>
-                    <p data-lang="card_guide_desc">Learn step by step.</p>
+                    <div class="fs-1 mb-2">🔢</div>
+                    <h5 class="fw-bold" data-lang="lvl1_title"></h5>
+                    <p class="small text-muted" data-lang="lvl1_desc"></p>
+                    <span class="badge bg-primary-subtle text-primary">Module 1</span>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm border-success" onclick="navigate('train01')" style="cursor:pointer">
+        <!-- Level 2: Visualization -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-success" onclick="navigate('visualization')" style="cursor:pointer">
                 <div class="card-body p-4 text-center">
-                    <div class="icon-box mb-3">🧪</div>
-                    <h3 data-lang="card_practice_title">Practice Lab</h3>
-                    <p><span class="badge bg-success">4 Challenges</span></p>
-                    <p data-lang="card_practice_desc"></p>
+                    <div class="fs-1 mb-2">📊</div>
+                    <h5 class="fw-bold" data-lang="lvl2_title"></h5>
+                    <p class="small text-muted" data-lang="lvl2_desc"></p>
+                    <span class="badge bg-success-subtle text-success">Module 2</span>
+                </div>
+            </div>
+        </div>
+        <!-- Level 3: Academic Consilium -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-info" onclick="navigate('academconsilium')" style="cursor:pointer">
+                <div class="card-body p-4 text-center">
+                    <div class="fs-1 mb-2">🏛️</div>
+                    <h5 class="fw-bold" data-lang="lvl3_title"></h5>
+                    <p class="small text-muted" data-lang="lvl3_desc"></p>
+                    <span class="badge bg-info-subtle text-info">Module 3</span>
+                </div>
+            </div>
+        </div>
+        <!-- Level 4: Trading -->
+        <div class="col-lg-3 col-md-6">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-warning" onclick="navigate('trading')" style="cursor:pointer">
+                <div class="card-body p-4 text-center">
+                    <div class="fs-1 mb-2">🚀</div>
+                    <h5 class="fw-bold" data-lang="lvl4_title"></h5>
+                    <p class="small text-muted" data-lang="lvl4_desc"></p>
+                    <span class="badge bg-warning-subtle text-warning">Module 4</span>
                 </div>
             </div>
         </div>

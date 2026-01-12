@@ -1,0 +1,25 @@
+{
+  "mod_title": "Market Intelligence",
+
+  "l01_title": "AI Financial Reporting",
+  "l01_desc": "Generate complex asset reports. The system analyzes price, moving averages, and adds John Murphy's insights.",
+  "cmt_l01": "Standard: ticker (Asset), period (Timeframe)",
+  "cmt_l01_suffix": "Shows annual statistics + Murphy insights",
+
+  "l02_title": "Flexible Timeframes",
+  "l02_desc": "The Brain automatically discovers and adjusts time intervals (1y, 2y, max) even if not explicitly specified.",
+  "l03_title": "Intermarket Laws (Murphy)",
+  "l03_desc": "Analyze correlations between different asset classes (Bonds vs Commodities) using classic trading rules.",
+  "l04_title": "Blockchain Security (Satoshi)",
+  "l04_desc": "Calculate success probability of a network attack using the Poisson model from the Bitcoin Whitepaper.",
+  "l05_title": "3D Taylor Forecasting",
+  "l05_desc": "Visualizing the future: render the complexity landscape and highlight the final expert verdict vector.",
+  "l06_title": "Deep Data Extraction",
+  "l06_desc": "Using DataConverter to filter specific JSON structures or class objects from multi-layered expert responses.",
+
+  "cmt_l02": "Flexible timeframe discovery in market logic",
+  "cmt_l03": "Apply Murphy's Law for intermarket correlation",
+  "cmt_l04": "Blockchain security: Attack probability model",
+  "cmt_l05": "3D Taylor projection with highlighted trend",
+  "cmt_l06": "Deep-scan results for specific data structures"
+}

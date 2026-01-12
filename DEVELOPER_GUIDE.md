@@ -1,48 +1,26 @@
-Этот файл нужно создать в корневой папке проекта (`ashaxiom_project/`). Он содержит **строгие правила**, по которым нужно добавлять новые книги.
+
+*Deep-dive for system developers.*
 
 ```markdown
-# AshAxiom Developer Guide 📘
+# AshAxiom Developer Guide (FullReload Architecture)
 
-To maintain the intelligence and stability of the library, all contributors must follow these strict rules when adding new mathematical modules.
+## 1. Object Spawning Principle
+To ensure data integrity and prevent cross-contamination in multi-asset analysis, `BrainCore.solve()` now **spawns** a new instance of `AxiomMain` for every operation.
+- **Stateless:** The Brain does not hold intermediate search results.
+- **Independent:** Each line in a chart is a unique memory object with its own styling.
 
-### 1. Directory Structure
-New books must be placed in: 
-`ashaxiom/lib/{Section}/hmBooks/{AuthorName}/`
+## 2. Capsule Expansion (The /update Folder)
+AshAxiom is infinitely updateable. To add a new AI capability (e.g., Voice AI or Image AI):
+1. Place the external library folder inside `brain/update/`.
+2. Create a `<skill_name>.json` passport file defining triggers and entry points.
+3. (Optional) Create a `<skill_name>_config.py` adapter to bridge data to the Golden Standard.
 
-- **Section**: Broad category (e.g., `hMath`, `Physics`, `Finance`).
-- **Author**: Use the author's last name (e.g., `Newton`, `Euler`).
-- **Book**: Filename should be `hmBookXX.py` or similar.
+## 3. Data Flow Pipeline
+- **Fetch**: Expert retrieves raw data from books or APIs.
+- **Standardize**: `DataConverter` flattens data into 1D/2D arrays.
+- **Visualize**: `hGraph` applies styles and renders synchronized views.
 
-*Always include an empty `__init__.py` in every new directory.*
-
-### 2. Mandatory Class Metadata
-Every book class must define its identity so the AI Brain can report sources correctly:
-```python
-class MyNewBook:
-    __title__ = "Calculus Volume 10"
-    __author__ = "Author Name"
-
-# AshAxiom Developer Guide 📘
-
-This document defines the strict rules for expanding the AshAxiom knowledge base.
-
-## 1. Directory Hierarchy
-New knowledge must follow the path:
-`ashaxiom/lib/{Section}/hmBooks/{Author}/{Book}.py`
-
-- **Section**: Domain (e.g., `hMath`, `Physics`, `Economics`).
-- **Author**: Last name of the author folder.
-- **Book**: Python file containing the class.
-
-*Every folder MUST contain an empty `__init__.py` file.*
-
-## 2. Book Class Requirements
-Every class within a book file must provide identity metadata for the AI Brain:
-
-```python
-class hmBookName:
-    __title__ = "Full Title of the Book/Module"
-    __author__ = "Original Author Name"
-
-    def __init__(self):
-        self.value = None # Storage for results    
+## 4. The Golden Standard Protocol
+All methods in new library additions must strictly use:
+`def my_method(self, expr=None, var='x', val=0, data=None, ticker=None):`
+This ensures the Brain's argument mapper correctly routes user input to your code.

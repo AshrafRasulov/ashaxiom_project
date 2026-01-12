@@ -1,0 +1,18 @@
+{
+  "mod_title": "Visual Intelligence",
+  "l01_title": "Synchronized 2D Charts",
+  "l01_desc": "AshAxiom's unique engine overlays multiple assets on one chart, auto-aligning different trading calendars.",
+  "l02_title": "Spread Analysis",
+  "l02_desc": "Using .toCorrectNumberYX('y') to extract pure prices and calculate the delta between competitors.",
+  "l03_title": "Raw 3D Meshing",
+  "l03_desc": "Visualize bivariate functions using the high-level .plot3D() method for mathematical landscapes.",
+  "l04_title": "Styling & Color Systems",
+  "l04_desc": "Configure visuals via .color(). Supports named colors, HEX, RGB, and dynamic gradient strings.",
+  "l05_title": "The Coordinate Bridge",
+  "l05_desc": "How the Brain transforms raw market data into intelligent structures ready for rendering.",
+  "cmt_l01": "Sync multiple assets on one timeline",
+  "cmt_l02": "Extract Y-axis and calculate market spread",
+  "cmt_l03": "Render raw 3D meshgrid surface",
+  "cmt_l04": "Apply custom RGB and Gradient styles",
+  "cmt_l05": "Transform raw data to coordinate structures"
+}

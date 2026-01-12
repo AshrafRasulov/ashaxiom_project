@@ -1,0 +1,18 @@
+{
+  "mod_title": "Basic Mathematics",
+  "l01_title": "Method Chaining (Piping)",
+  "l01_desc": "AshAxiom allows building infinite computation pipelines. Each method returns the 'self' object.",
+  "l02_title": "Array-Based Operations",
+  "l02_desc": "The start() method automatically detects lists and applies operations to all elements simultaneously.",
+  "l03_title": "Precision Control",
+  "l03_desc": "Use .precision() to round numeric output within the Expert Explorer UI.",
+  "l04_title": "Irrational Constants",
+  "l04_desc": "Working with Pi and E. AshAxiom maintains high precision during complex calculations.",
+  "l05_title": "Export Pipeline",
+  "l05_desc": "Save results to JSON and Excel formats directly at the end of your command chain.",
+  "cmt_l01": "Initialize system and start a computation chain",
+  "cmt_l02": "Execute operations on a collection of data",
+  "cmt_l03": "Set numeric output precision for Explorer UI",
+  "cmt_l04": "Precision control for irrational numbers (Pi, E)",
+  "cmt_l05": "Export data to universal JSON and Excel structures"
+}

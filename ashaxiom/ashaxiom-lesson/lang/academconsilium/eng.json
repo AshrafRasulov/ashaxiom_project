@@ -1,0 +1,21 @@
+{
+  "mod_title": "Academic Consilium",
+  "l01_title": "Knowledge Navigation",
+  "l01_desc": "Learn how to programmatically explore the library structure via stateless Brain discovery.",
+  "l02_title": "Analytical Limits (Zorich)",
+  "l02_desc": "Solve limits using strict academic rigor. Application of the Golden Standard argument mapping.",
+  "l03_title": "Fourier Series (Consilium)",
+  "l03_desc": "Parallelized execution. The system queries multiple authors (Fikhtengolts, Kudryavtsev) simultaneously.",
+  "l04_title": "Analytical Geometry (Krasnov)",
+  "l04_desc": "Constructing 3D plane equations and measuring shortest distance from a point to a surface.",
+  "l05_title": "Vector Calculus (CURL)",
+  "l05_desc": "Computing the Rotor (Curl) of a vector field using SymPy's high-precision symbolic logic.",
+  "l06_title": "Wave Equations (PDE)",
+  "l06_desc": "Solving partial differential equations and modeling physical wave propagation.",
+  "cmt_l01": "Inspect all available library branches",
+  "cmt_l02": "Solve limit using Zorich's mathematical rigor",
+  "cmt_l03": "Parallel execution of multiple Fourier experts",
+  "cmt_l04": "Construct plane and calculate distance",
+  "cmt_l05": "Calculate the Rotor (Curl) of a vector field",
+  "cmt_l06": "Solve partial differential wave equation"
+}

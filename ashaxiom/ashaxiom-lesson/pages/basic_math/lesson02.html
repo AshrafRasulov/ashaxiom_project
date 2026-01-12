@@ -1,0 +1,37 @@
+<div class="container py-4 animate-fade-in">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="navigate('home')" data-lang="btn_home"></a></li>
+            <li class="breadcrumb-item active"><span data-lang="mod_title"></span></li>
+        </ol>
+    </nav>
+
+    <div class="card border-0 shadow-lg rounded-4 p-4">
+        <h2 class="text-primary fw-bold">
+            <span data-lang="mod_title"></span>: 
+            <span data-lang="lesson_label"></span> <span data-lesson-num></span> - <span data-lang="l02_title"></span>
+        </h2>
+        <p class="lead" data-lang="l02_desc"></p>
+
+        <div class="jupyter-cell shadow-sm">
+            <code>
+                <span class="sh-cmt"># <span data-lang="cmt_l02"></span></span><br>
+                <span class="sh-var">data</span> = [<span class="sh-num">1</span>, <span class="sh-num">2</span>, <span class="sh-num">3</span>]<br>
+                <span class="sh-var">res</span> = <span class="sh-var">ashaxiom</span>.<span class="sh-var">Axiom</span>.<span class="sh-fn">start</span>(<span class="sh-var">data</span>).<span class="sh-fn">add</span>(<span class="sh-num">10</span>).<span class="sh-fn">multiply</span>(<span class="sh-num">2</span>).<span class="sh-fn">result</span>()<br>
+                <span class="sh-fn">print</span>(<span class="sh-var">res</span>)
+            </code>
+        </div>
+
+        <div class="mt-4 text-center">
+            <span class="result-label" data-lang="expected_res"></span>
+            <div class="p-3 bg-white border rounded shadow-sm">
+                <img src="pages/basic_math/imgs/lesson02.jpg" class="img-fluid" alt="Result 02">
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-5 pt-3 border-top">
+            <button class="btn btn-outline-secondary px-4 rounded-pill fw-bold" onclick="navigate('prev')" data-lang="btn_prev"></button>
+            <button class="btn btn-primary px-5 rounded-pill shadow-sm fw-bold" onclick="navigate('next')" data-lang="btn_next"></button>
+        </div>
+    </div>
+</div>
